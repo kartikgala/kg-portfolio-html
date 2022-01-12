@@ -1,0 +1,26 @@
+/* CSS Document */
+h1 {font-family: roboto mono, sans-serif;
+  text-decoration: underline;
+font-size: 3em;
+color: grey;}
+
+.quote{
+  font-size: 1.5em;
+  font-weight: bold;
+  color: red;
+}
+
+p {font-family: roboto mono, sans-serif;
+  font-size: 1.2em;
+  color: #009ACD;}
+
+*7
+#mybox {
+background: green;
+width: 100%;
+height: 2.0em;
+font-family: roboto mono, sans-serif;
+color: white;
+font-size: 1.5em;
+text-align: center;
+}
