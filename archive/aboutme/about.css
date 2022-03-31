@@ -1,0 +1,74 @@
+/* aboutMe.css file */
+
+html {
+    background-color: white;
+}
+
+body {
+    animation-name: backgroundColorPalette;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    /* linear is enabled default, it’s not necessary to add it make it work but it can make your code more expressive */
+    margin: 1.1% auto;
+    padding: 0 20px 20px 20px;
+    width: 600px;
+    border: 4px solid black;
+}
+
+@keyframes backgroundColorPalette {
+    0% {
+        background: #ee6055;
+    }
+
+    25% {
+        background: #60d394;
+    }
+
+    50% {
+        background: #aaf683;
+    }
+
+    75% {
+        background: #ffd97d;
+    }
+
+    100% {
+        background: #ff9b85;
+    }
+}
+
+h1 {
+    font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: 4px 4px 10px white;
+    color: rgb(255, 0, 200);
+}
+
+p {
+    font-family: 'Roboto mono', serif;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+    border: 3px solid black;
+}
+
+ul {
+    font-family: 'Roboto mono', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
+    /* border: 3px solid black; */
+    border: dashed black;
+    border-radius: 10px;
+}
