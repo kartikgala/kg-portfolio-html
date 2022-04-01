@@ -19,7 +19,10 @@ function setup() {
 }
 
 function draw() {
-  background(50, 89, 100);
+  background(50, 80, 100);
+  // noFill();
+  strokeWeight(4);
+stroke(51);
   bug1.move();
   bug1.display();
   bug2.move();
@@ -35,7 +38,7 @@ class Jitter {
   constructor() {
     this.x = random(width);
     this.y = random(height);
-    this.diameter = random(10, 30);
+    this.diameter = random(50, 90);
     this.speed = 1;
   }
 
