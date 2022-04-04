@@ -1,0 +1,36 @@
+let song;
+let canvas;
+
+function preload() {
+  song = loadSound('assets/Electric_Ten_Broke_in_Summer.mp3');
+}
+
+function setup() {
+  background(255, 0, 0);
+  //canvas = createCanvas(displayWidth, displayHeight);
+  canvas = createCanvas(400, 400);
+  canvas.position(0, 0);
+  canvas.style("z-index", "-1");
+
+  // Creating amplitude entry
+  amp = new p5.Amplitude();
+
+}
+
+function draw() {
+
+  var level = amp.getLevel();
+}
+
+function mousePressed() {
+  if (song.isPlaying()) {
+    // .isPlaying() returns a boolean
+    song.stop();
+    background(255, 0, 0);
+    rect(20, 20, 40, 40);
+  } else {
+    song.play();
+    background(0, 255, 0);
+    rect(80, 20, 40, 40);
+  }
+}

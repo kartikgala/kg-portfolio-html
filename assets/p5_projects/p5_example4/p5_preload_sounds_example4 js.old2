@@ -1,0 +1,38 @@
+var sound;
+var fft;
+
+function preload() {
+    sound = loadSound('assets/Electric_Ten_Broke_in_Summer.mp3');
+}
+
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+
+    fft = new p5.FFT();
+    noStroke();
+}
+
+function draw() {
+    if (sound.isPlaying() == true) {
+        background(0, 30);
+        fill(255);
+
+        var spectrum = fft.analyze();
+        for (var i = 0; i < spectrum.length; i += 10) {
+            var x = map(i, 0, spectrum.length, 0, width);
+            var y = map(spectrum[i], 0, 255, height, 0);
+            ellipse(x, y, 5, 5);
+        }
+
+    } else {
+        background(255);
+    }
+}
+
+function mousePressed() {
+    if (sound.isPlaying() == true) {
+        sound.pause();
+    } else {
+        sound.play();
+    }
+}
